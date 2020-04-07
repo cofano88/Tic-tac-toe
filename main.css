@@ -1,0 +1,46 @@
+.field {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.cell {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #000;
+}
+
+.cross,
+.circle {
+  height: 100%;
+	position: relative;
+	display:flex;
+}
+
+.cross:before,
+.cross:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+}
+
+.cross:before {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.cross:after {
+  transform: rotate(-45deg) translate(-10px, 10px);
+}
+
+.circle:before {
+	content: "";
+	display: block;
+	height: 75%;
+	width: 75%;
+	margin: auto;
+	border: 2px solid #000;
+	border-radius: 50%;
+}
